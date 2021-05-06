@@ -1,0 +1,57 @@
+
+<style type="text/css">
+    dt::before {
+        content: "Q: ";
+    }
+
+    dd::before {
+        content: "A: ";
+    }
+
+</style>
+<dl>
+    <b>Questions/need:</b>
+
+    <dt>What is the framing question of your analysis, or the purpose of the model/system you plan to build?</dt>
+    <dd>Does a large quantity of mentions of a ticker symbol on the subreddit Wall Street Bets influence the volatility
+        of a stock? (Normal volatility will be accounted for using realized volatility) </dd>
+    <br>
+
+
+    <dt>Who benefits from exploring this question or building this model/system?</dt>
+    <dd>Investors of these stocks could gain insight into the behavior of said stock.</dd>
+    <br>
+
+    <b>Data Description:</b>
+    <dt>What dataset(s) do you plan to use, and how will you obtain the data?</dt>
+    <dd>Scraped reddit comments either using slenium or beautiful soup, may resort to using Praw depending on difficulty. <br>
+        Scraped information of ticker symbols and associated company names using selenium or beautiful soup. <br>
+        Yfinance api for obtaining market info of tickers.
+    </dd>
+    <br>
+
+    <dt>What is an individual sample/unit of analysis in this project? What characteristics/features do you expect to work with?</dt>
+    <dd>Table 1: Ticker symbol, number of mentions, realized volatility, timeframe <br>
+        Table 2: Ticker symbol, company name <br>
+    </dd>
+    <br>
+
+    <dt>If modeling, what will you predict as your target?</dt>
+    <dd>A correlation between volatilty and number of mentions of said stock. </dd>
+    <br>
+
+    <b>Tools:</b>
+    <dt>How do you intend to meet the tools requirement of the project?</dt>
+    <dd> Use beautiful soup and/or Selenium to scrape data</dd>
+    <br>
+
+    <dt>Are you planning in advance to need or use additional tools beyond those required?</dt>
+    <dd>Yes, various apis mentioned above.</dd>
+    <br>
+
+    <b>MVP Goal:</b>
+    <dt>What would a minimum viable product (MVP) look like for this project?</dt>
+    <dd>A linear regression model between the most mentioned stock and volatilty occured by stock over a 1 week (5 trading days) period.</dd>
+    <br>
+
+</dl>
